@@ -16,6 +16,7 @@ function App() {
     if (tabItem === "tab1") {
       setSelectedTab("tab1");
     } else if (tabItem === "tab2") {
+      setShowModal(false)
       setSelectedTab("tab2");
     }
   };
@@ -24,14 +25,14 @@ function App() {
     <div className="app">
       <ui className="tab">
         <li
-          className={`tablinks ${selectedTab === "tab1" ? "active" : ""}`}
+          className={`tablinks${selectedTab === " tab1" ? "active" : ""}`}
           id="tab1"
           onClick={handleTabSelection}
         >
           Check-in widget
         </li>
         <li
-          className={`tablinks ${selectedTab === "tab2" ? "active" : ""}`}
+          className={`tablinks${selectedTab === "tab2" ? " active" : ""}`}
           id="tab2"
           onClick={handleTabSelection}
         >
@@ -41,7 +42,7 @@ function App() {
 
       {selectedTab === "tab1" ? (
         <>
-          <h2>Welcome Page</h2>
+          <h2 className="tab1-heading">Welcome Page</h2>
           <button onClick={() => setShowModal(true)}>
             Open Wellbeing Modal
           </button>

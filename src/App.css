@@ -1,11 +1,18 @@
 
+
 body {
+  width: 100%;
   font-family: sans-serif;
   display: flex;
   justify-content: center;
-  align-items: center;
   min-height: 100vh;
   margin: 0;
+}
+
+.app{
+  margin-top: 50px;
+  width: 800px;
+  position: relative;
 }
 
 .modal-container {
@@ -69,15 +76,19 @@ body {
   background-color: #0069d9;
 }
 
-/* Style the tab */
 .tab {
   overflow: hidden;
   border: 1px solid #ccc;
   background-color: #f1f1f1;
 }
 
+.tab1-heading{
+  color: #0f0f0f;
+}
+
 .tab li {
-  /* background-color: inherit; */
+  color: #0f0f0f;
+  text-align: center;
   float: left;
   border: none;
   outline: none;
@@ -90,6 +101,10 @@ body {
 .tab li:hover {
   background-color: #ddd;
   color: #0f0f0f;
+}
+
+.tablinks{
+  width: 100%;
 }
 
 .tab li.active {

@@ -19,7 +19,7 @@ const WellbeingModal = ({ onContinue }) => {
       <div className="modal-content">
         <header>
           <button onClick={onContinue} ><img src={leftArrow} alt="back" /></button>
-          <h2>Wellbeing Check-in</h2>
+          <h2 className="head-line">Wellbeing Check-in</h2>
           <button onClick={onContinue}><img src={cross} alt="cross" /></button>
         </header>
         <p>Hello! How are you feeling today?</p>
