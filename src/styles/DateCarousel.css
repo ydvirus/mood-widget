@@ -48,3 +48,13 @@
     font-weight:500;
     cursor:pointer;
 }
+
+@media (max-width: 768px){
+    .section-2 .time-chips{
+        display: block;
+    }
+    .section-2 .time-chips div{
+        display:inline-block;
+        margin:0% 8px 8px 0px;
+    }
+}
