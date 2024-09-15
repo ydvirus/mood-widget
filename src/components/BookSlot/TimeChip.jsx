@@ -1,8 +1,8 @@
 import React from 'react'
 
-const TimeChip = ({displayTimeSlot}) => {
+const TimeChip = ({displayTimeSlot,setSelectedTime, selectedTime }) => {
   return (
-    <div>{displayTimeSlot}</div>
+    <div className={`time-chip${selectedTime === displayTimeSlot ? " active": ""}`} onClick={()=>setSelectedTime(displayTimeSlot)} >{displayTimeSlot}</div>
   )
 }
 

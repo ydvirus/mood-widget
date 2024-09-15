@@ -2,6 +2,7 @@ import React, { useEffect, useMemo, useState } from "react";
 import slotsData from "../../data/slot.json";
 import DateCarousel from "./DateCarousel";
 import TimeChip from "./TimeChip";
+import '../../styles/Bookslot.css';
 
 const BookSlot = () => {
   const [selectedDate, setSelectedDate] = useState(null);
@@ -26,16 +27,21 @@ const BookSlot = () => {
   }, []);
 
   const handleDateSelection = (slot) => {
+    console.log("slot", slot);
+    console.log(allDatesAndTimeSlots[selectedDate]);
     setSelectedDate(slot);
+    setSelectedTime(null);
   };
-  console.log("allSlots", allSlots, allDatesAndTimeSlots);
+
+  console.log(selectedTime,"selectedTime");
   return (
-    <div className="container">
+    <div className="bookslot-container">
       <div className="section-1">
         <h2>Pick a date</h2>
         <DateCarousel
           slots={allDatesAndTimeSlots}
           handleDateSelection={handleDateSelection}
+          selectedDate={selectedDate}
         />
       </div>
 
@@ -45,7 +51,7 @@ const BookSlot = () => {
         <div className="time-chips">
           {selectedDate &&
             allDatesAndTimeSlots[selectedDate].map((timeSlot) => {
-              return <TimeChip displayTimeSlot={timeSlot} />;
+              return <TimeChip displayTimeSlot={timeSlot} setSelectedTime={setSelectedTime} selectedTime={selectedTime} />;
             })}
         </div>
       </div>

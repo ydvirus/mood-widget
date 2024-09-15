@@ -6,9 +6,6 @@
     max-width: 950px;
     width: 70vw;
     display: flex;
-    scroll-behavior: smooth;
-    overflow: auto;
-    scroll-snap-type: x mandatory;
 }
 .section-1 h2{
     color: #303030;
@@ -57,4 +54,20 @@
         display:inline-block;
         margin:0% 8px 8px 0px;
     }
+}
+
+.carousel-view{
+    display: flex;
+    max-width: 600px;
+    overflow-x: auto;
+    gap: 25px;
+}
+
+.date-box{
+    padding: 20px 30px;
+}
+
+.date-carousel-container{
+    display: flex;
+    
 }

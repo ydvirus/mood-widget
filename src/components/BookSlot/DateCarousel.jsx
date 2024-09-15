@@ -1,24 +1,47 @@
-import React from "react";
+import React, { useRef } from "react";
 import "./../../styles/DateCarousel.css";
-import { extractDate } from "./helper";
+import DateBox from "./DateBox";
 
-const DateCarousel = ({ slots, handleDateSelection }) => {
+const DateCarousel = ({ slots, handleDateSelection, selectedDate }) => {
+  const carouselContainer = useRef(null);
+  const scrollCarousel = (direction) => {
+    if (direction === "left") {
+      carouselContainer.current.scrollLeft -= 40;
+    }
+    if (direction === "right") {
+      carouselContainer.current.scrollLeft += 40;
+    }
+  };
   return (
-    <div class="container">
-      <div class="carousel-view">
-        <button id="prev-btn" class="prev-btn">{"<-"}</button>
-
+    <div class="date-carousel-container">
+      <button
+        id="prev-btn"
+        class="prev-btn"
+        onClick={() => scrollCarousel("left")}
+      >
+        {"<-"}
+      </button>
+      <div id="carousel-view-id" class="carousel-view" ref={carouselContainer}>
         {slots &&
           Object.keys(slots).map((slot) => {
             return (
-              <div id="item-list" class="item-list" onClick={()=>handleDateSelection(slot)}>
-                {extractDate(slot)}\
+              <div
+                key={slot}
+                class={`item-list${selectedDate === slot ? " active" : ""}`}
+                onClick={() => handleDateSelection(slot)}
+              >
+                {<DateBox slotDate={slot} />}
               </div>
             );
           })}
-
-        <button id="next-btn" class="next-btn">{"->"}</button>
       </div>
+      <button
+        id="next-btn"
+        class="next-btn"
+        onClick={() => scrollCarousel("right")}
+      >
+        {"->"}
+      </button>
     </div>
   );
 };
