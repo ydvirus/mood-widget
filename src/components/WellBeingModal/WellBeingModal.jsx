@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "../../styles/WellbeingModal.css";
+import "./WellbeingModal.css";
 import leftArrow from "../../assets/icons/left-arrow.png";
 import cross from "../../assets/icons/cross.png";
 

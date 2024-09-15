@@ -1,8 +1,8 @@
 import React, { useEffect, useMemo, useState } from "react";
 import slotsData from "../../data/slot.json";
-import DateCarousel from "./DateCarousel";
-import TimeChip from "./TimeChip";
-import '../../styles/Bookslot.css';
+import DateCarousel from "./DateCarousel/DateCarousel";
+import TimeChip from "./TimeChip/TimeChip";
+import './Bookslot.css';
 
 const BookSlot = () => {
   const [selectedDate, setSelectedDate] = useState(null);

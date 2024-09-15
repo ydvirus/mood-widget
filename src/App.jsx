@@ -7,16 +7,12 @@ function App() {
   const [selectedTab, setSelectedTab] = useState("tab1");
   const [showModal, setShowModal] = useState(false);
 
-  const handleContinue = () => {
-    setShowModal(false);
-  };
-
   const handleTabSelection = (e) => {
     let tabItem = e.target.id;
     if (tabItem === "tab1") {
       setSelectedTab("tab1");
     } else if (tabItem === "tab2") {
-      setShowModal(false)
+      setShowModal(false);
       setSelectedTab("tab2");
     }
   };
@@ -52,7 +48,7 @@ function App() {
       ) : null}
       {showModal ? (
         <WellbeingModal
-          onContinue={handleContinue} // Pass the continue handler
+          onContinue={()=>setShowModal(false)}
         />
       ) : null}
     </div>
