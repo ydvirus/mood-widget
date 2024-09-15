@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "../styles/WellbeingModal.css";
+import "../../styles/WellbeingModal.css";
 
 const WellbeingModal = ({ onContinue }) => {
   const [selectedFeeling, setSelectedFeeling] = useState(null);
@@ -16,9 +16,9 @@ const WellbeingModal = ({ onContinue }) => {
     <div className="modal">
       <div className="modal-content">
         <header>
-            <button >back btn</button>
+            <button onClick={onContinue} >back btn</button>
         <h2>Wellbeing Check-in</h2>
-        <button>cross</button>
+        <button onClick={onContinue}>cross</button>
         </header>
         <p>Hello! How are you feeling today?</p>
 

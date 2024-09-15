@@ -1,0 +1,12 @@
+.item{
+    scroll-snap-align: center;
+}
+
+.item-list{
+    max-width: 950px;
+    width: 70vw;
+    display: flex;
+    scroll-behavior: smooth;
+    overflow: auto;
+    scroll-snap-type: x mandatory;
+}
