@@ -23,28 +23,37 @@ function App() {
   return (
     <div className="app">
       <ui className="tab">
-        <li className={`tablinks ${selectedTab ==="tab1" ? "active" : ""}`} id="tab1" onClick={handleTabSelection}>
+        <li
+          className={`tablinks ${selectedTab === "tab1" ? "active" : ""}`}
+          id="tab1"
+          onClick={handleTabSelection}
+        >
           Check-in widget
         </li>
-        <li className={`tablinks ${selectedTab ==="tab2" ? "active" : ""}`} id="tab2" onClick={handleTabSelection}>
+        <li
+          className={`tablinks ${selectedTab === "tab2" ? "active" : ""}`}
+          id="tab2"
+          onClick={handleTabSelection}
+        >
           Book timeslot
         </li>
       </ui>
 
-      {
-        selectedTab === "tab1" ? showModal ? (
-          <WellbeingModal
-            onContinue={handleContinue} // Pass the continue handler
-          />
-        ) : 
-          <>
-            <h2>Welcome Page</h2>
-            <button onClick={() => setShowModal(true)}>
-              Open Wellbeing Modal
-            </button>
-          </> : selectedTab === "tab2" ? <> <BookSlot/> </> : null
-        
-      }
+      {selectedTab === "tab1" ? (
+        <>
+          <h2>Welcome Page</h2>
+          <button onClick={() => setShowModal(true)}>
+            Open Wellbeing Modal
+          </button>
+        </>
+      ) : selectedTab === "tab2" ? (
+        <BookSlot />
+      ) : null}
+      {showModal ? (
+        <WellbeingModal
+          onContinue={handleContinue} // Pass the continue handler
+        />
+      ) : null}
     </div>
   );
 }
