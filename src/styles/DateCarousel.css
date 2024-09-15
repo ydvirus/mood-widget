@@ -10,3 +10,41 @@
     overflow: auto;
     scroll-snap-type: x mandatory;
 }
+.section-1 h2{
+    color: #303030;
+    font-size:20px;
+    font-weight:600;
+}
+/* .section-1 .carousel-view{
+    display: inline-flex;
+} */
+.section-2{
+    margin-top:30px;
+}
+.section-2 h2{
+    margin:0px;
+    color: #303030;
+    font-size:20px;
+    font-weight:600;
+}
+.section-2 p{
+    margin: 0px;
+    color: #9b9b9b;
+    font-size: 14px;
+    font-weight: 600;
+}
+.section-2 .time-chips{
+    display:flex;
+    margin-top:20px;
+}
+.section-2 .time-chips div{
+    padding:8px;
+    margin-right:10px;
+    background:#fff;
+    border:1px solid #ccc;
+    border-radius:5px;
+    color:#303030;
+    font-size:15px;
+    font-weight:500;
+    cursor:pointer;
+}

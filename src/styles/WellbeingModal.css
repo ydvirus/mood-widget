@@ -88,21 +88,57 @@
 }
 
 .modal-content p{
-    display: flex;
-    justify-content: center;
+  margin: 0px;
+  display: flex;
+  justify-content: center;
+  font-size: 18px;
+  color: #303030;
+  font-weight: 600;
 }
 header{
     display: flex;
     justify-content: space-between;
 }
+.modal-content header button{
+  background-color:transparent;
+}
+.modal-content header button:hover,
+.modal-content header button:focus{
+  border:0px;
+  outline:0px;
+}
+.modal-content header button img{
+  width:14px;
+  filter: contrast(0.2);
+}
 .feeling-options{
     display: flex;
     justify-content: center;
 }
-
+.modal-content .feeling-options button{
+  min-width: 100px;
+  padding: 16px 0px;
+  margin: 0px 5px;
+  background: transparent;
+  border: 2px solid #ccc;
+  border-radius: 10px;
+}
+.modal-content .feeling-options span:first-child{
+  display:block;
+  font-size:35px;
+}
+.modal-content .feeling-options span:last-child{
+  display:block;
+  margin-top:15px;
+  color:#555;
+  font-size:13px;
+  font-weight:600;
+}
 .continue-button{
     width: 90%;
     display: grid;   
     margin-left: auto;
     margin-right: auto;
+    background-color:#95a5be;
+    border-radius:8px;
 }

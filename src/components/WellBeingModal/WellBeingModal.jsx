@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import "../../styles/WellbeingModal.css";
+import leftArrow from "../../assets/icons/left-arrow.png";
+import cross from "../../assets/icons/cross.png";
 
 const WellbeingModal = ({ onContinue }) => {
   const [selectedFeeling, setSelectedFeeling] = useState(null);
@@ -16,9 +18,9 @@ const WellbeingModal = ({ onContinue }) => {
     <div className="modal">
       <div className="modal-content">
         <header>
-            <button onClick={onContinue} >back btn</button>
-        <h2>Wellbeing Check-in</h2>
-        <button onClick={onContinue}>cross</button>
+          <button onClick={onContinue} ><img src={leftArrow} alt="back" /></button>
+          <h2>Wellbeing Check-in</h2>
+          <button onClick={onContinue}><img src={cross} alt="cross" /></button>
         </header>
         <p>Hello! How are you feeling today?</p>
 

@@ -99,4 +99,22 @@ body {
 
 ui.tab{
   list-style-type: none;
+  display:flex;
+  justify-content:center;
+  background-color:transparent;
+  border:0px;
+}
+button {
+  background-color: #cccccc;
+  border-radius: 4px;
+  color: #000;
+  font-size: 15px;
+  font-weight: 500;
+  border:0px;
+  outline:0px;
+}
+button:hover,
+button:focus{
+  border:0px;
+  outline:0px;
 }
