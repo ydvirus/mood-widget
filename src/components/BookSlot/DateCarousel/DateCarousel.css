@@ -2,10 +2,14 @@
     scroll-snap-align: center;
 }
 
-.item-list{
+/* .item-list{
     max-width: 950px;
     width: 70vw;
     display: flex;
+} */
+.item-list.active{
+    background-color: #eaeff3;
+    border-radius:7px;   
 }
 .section-1 h2{
     color: #303030;
@@ -45,6 +49,10 @@
     font-weight:500;
     cursor:pointer;
 }
+.section-2 .time-chips div.active{
+    background-color: #eaeff3;
+    border-radius:7px;
+}
 
 @media (max-width: 768px){
     .section-2 .time-chips{
@@ -58,16 +66,53 @@
 
 .carousel-view{
     display: flex;
-    max-width: 600px;
+    width: 100%;
     overflow-x: auto;
-    gap: 25px;
+    gap: 18px;
 }
 
 .date-box{
-    padding: 20px 30px;
+    padding: 16px 10px;
+    border: 1px solid #ccc;
+    border-radius: 7px;
 }
 
 .date-carousel-container{
     display: flex;
-    
 }
+button#prev-btn,
+button#next-btn {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    padding: 0px;
+}
+button#prev-btn:active,
+button#next-btn:active,
+button#prev-btn:focus,
+button#next-btn:focus{
+    border:0px;
+    outline:0px;
+}
+
+/* width */
+.carousel-view::-webkit-scrollbar {
+    height: 8px;
+  }
+  
+  /* Track */
+  .carousel-view::-webkit-scrollbar-track {
+    background: #f7f4ed;
+    border-radius:7px;
+  }
+  
+  /* Handle */
+  .carousel-view::-webkit-scrollbar-thumb {
+    background: #eaeff3;
+    border-radius:7px;
+  }
+  
+  /* Handle on hover */
+  .carousel-view::-webkit-scrollbar-thumb:hover {
+    background: #ccc;
+  }
