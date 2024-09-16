@@ -1,6 +1,6 @@
 import { useState } from "react";
 import "./App.css";
-import WellbeingModal from "./components/WellBeingModal/WellBeingModal";
+import WellbeingModal from "./components/WellBeingModal";
 import BookSlot from "./components/BookSlot/BookSlot";
 
 function App() {
@@ -49,6 +49,7 @@ function App() {
       {showModal ? (
         <WellbeingModal
           onContinue={()=>setShowModal(false)}
+          data-testid="wellbeing-modal"
         />
       ) : null}
     </div>

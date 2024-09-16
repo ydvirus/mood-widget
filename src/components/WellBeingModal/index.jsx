@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./WellbeingModal.css";
+import "./stylesheet.css";
 import leftArrow from "../../assets/icons/left-arrow.png";
 import cross from "../../assets/icons/cross.png";
 
@@ -34,12 +34,7 @@ const WellbeingModal = ({ onContinue }) => {
             >
                 <span>{feeling.emoji}</span>
                 <span>{feeling.text}</span>
-              {/* <div className="emoji">
-                {feeling.text}
-                <span style="font-size: 24px; color: red;">
-                  {feeling.emoji}
-                </span>
-              </div> */}
+              
             </button>
           ))}
         </div>

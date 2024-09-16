@@ -1,7 +1,7 @@
 import React, { useEffect, useMemo, useState } from "react";
 import slotsData from "../../data/slot.json";
 import DateCarousel from "./DateCarousel/DateCarousel";
-import TimeChip from "./TimeChip/TimeChip";
+import TimeChip from "./TimeChip";
 import './Bookslot.css';
 
 const BookSlot = () => {
@@ -33,7 +33,6 @@ const BookSlot = () => {
     setSelectedTime(null);
   };
 
-  console.log(selectedTime,"selectedTime");
   return (
     <div className="bookslot-container">
       <div className="section-1">
