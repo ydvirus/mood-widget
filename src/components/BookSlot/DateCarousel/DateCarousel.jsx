@@ -1,6 +1,8 @@
-import React, { useRef } from "react";
+import { useRef } from "react";
 import "./DateCarousel.css";
 import DateBox from "../DateBox/DateBox";
+import leftArrow from "../../../assets/icons/left-arrow.png";
+import rightArrow from "../../../assets/icons/right-arrow.png";
 
 const DateCarousel = ({ slots, handleDateSelection, selectedDate }) => {
   const carouselContainer = useRef(null);
@@ -13,21 +15,25 @@ const DateCarousel = ({ slots, handleDateSelection, selectedDate }) => {
     }
   };
   return (
-    <div class="date-carousel-container">
+    <div className="date-carousel-container">
       <button
         id="prev-btn"
-        class="prev-btn"
+        className="prev-btn"
         onClick={() => scrollCarousel("left")}
       >
-        {"<-"}
+        <img src={leftArrow} alt="previous arrow" />
       </button>
-      <div id="carousel-view-id" class="carousel-view" ref={carouselContainer}>
+      <div
+        id="carousel-view-id"
+        className="carousel-view"
+        ref={carouselContainer}
+      >
         {slots &&
           Object.keys(slots).map((slot) => {
             return (
               <div
                 key={slot}
-                class={`item-list${selectedDate === slot ? " active" : ""}`}
+                className={`item-list${selectedDate === slot ? " active" : ""}`}
                 onClick={() => handleDateSelection(slot)}
               >
                 {<DateBox slotDate={slot} />}
@@ -37,10 +43,10 @@ const DateCarousel = ({ slots, handleDateSelection, selectedDate }) => {
       </div>
       <button
         id="next-btn"
-        class="next-btn"
+        className="next-btn"
         onClick={() => scrollCarousel("right")}
       >
-        {"->"}
+        <img src={rightArrow} alt="right arrow" />
       </button>
     </div>
   );

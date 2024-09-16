@@ -86,17 +86,18 @@
 }
 
 .modal-content {
-  height: 100vh;
+  height: 90vh;
   width: 100%;
   background-color: #fefefe;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  padding: 10px;
   padding-bottom: 30px;
 }
 
 .modal-content p {
-  margin: 0px;
+  margin: 0px 40px;
   display: flex;
   justify-content: center;
   font-size: 18px;

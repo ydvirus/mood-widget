@@ -37,12 +37,12 @@ function App() {
       </ui>
 
       {selectedTab === "tab1" ? (
-        <>
+        <section className="tab1-container">
           <h2 className="tab1-heading">Welcome Page</h2>
           <button onClick={() => setShowModal(true)}>
             Open Wellbeing Modal
           </button>
-        </>
+        </section>
       ) : selectedTab === "tab2" ? (
         <BookSlot />
       ) : null}

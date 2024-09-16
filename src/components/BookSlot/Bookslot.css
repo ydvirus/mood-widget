@@ -1,4 +1,6 @@
 .bookslot-container {
-  padding-left: 30px;
-  padding-right: 30px;
+  padding: 0 20px;
+  margin: auto;
+  max-width: 40rem;
+
 }

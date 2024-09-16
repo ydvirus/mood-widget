@@ -7,6 +7,7 @@ body {
   justify-content: center;
   min-height: 100vh;
   margin: 0;
+  background-color: #f7f4ee;
 }
 
 .app{
@@ -139,4 +140,10 @@ button:focus{
 }
 button:focus, button:focus-visible{
   outline: 0px;
+}
+
+.tab1-container{
+  margin: auto;
+  max-width: 40rem;
+  text-align: center;
 }
