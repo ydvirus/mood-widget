@@ -21,14 +21,14 @@ function App() {
     <div className="app">
       <ui className="tab">
         <li
-          className={`tablinks${selectedTab === " tab1" ? "active" : ""}`}
+          className={`tablinks${selectedTab === "tab1" ? " active" : ""}`}
           id="tab1"
           onClick={handleTabSelection}
         >
           Check-in widget
         </li>
         <li
-          className={`tablinks${selectedTab === "tab2" ? " active" : ""}`}
+          className={`tablinks${selectedTab === " tab2" ? " active" : ""}`}
           id="tab2"
           onClick={handleTabSelection}
         >
